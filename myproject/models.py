@@ -4,7 +4,7 @@ from django.contrib.contenttypes.fields import GenericRelation, GenericForeignKe
 
 
 class MainModel(models.Model):
-    text = models.CharField(blank=True)
+    text = models.CharField(blank=True, max_length=100)
 
     content_type = models.ForeignKey(
         ContentType, on_delete=models.CASCADE, related_name="+"
